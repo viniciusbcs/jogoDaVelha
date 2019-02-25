@@ -10,6 +10,7 @@ char marcaPosicao(char *s, char ch);
 char pegaPosicao();
 void marcaPosicaoDois(char *s, char ch);
 int verificaVitoria(char *s);
+void mensagemVencedor();
 
 int main(int argc, char *argv[]){
     boasVindas();
@@ -154,31 +155,34 @@ char pegaPosicao(){
 int verificaVitoria(char *s){
     //printf("%c", s[0]);
     if(s[0] == s[4] && s[4] == s[8]){
-        printf("Temos um ganhador! \n");
+        mensagemVencedor();
         return 1;
     }else if(s[2] == s[5] && s[5] == s[8]){
-        printf("Temos um ganhador! \n");
+        mensagemVencedor();
         return 1;
     }else if(s[1] == s[4] && s[4] == s[7]){
-        printf("Temos um ganhador! \n");
+        mensagemVencedor();
         return 1;
     }else if(s[0] == s[3] && s[3] == s[6]){
-        printf("Temos um ganhador! \n");
+        mensagemVencedor();
         return 1;
     }else if(s[6] == s[7] && s[7] == s[8]){
-        printf("Temos um ganhador! \n");
+        mensagemVencedor();
         return 1;
     }else if(s[3] == s[4] && s[4] == s[5]){
-        printf("Temos um ganhador! \n");
+        mensagemVencedor();
         return 1;
     }else if(s[0] == s[1] && s[1] == s[2]){
-        printf("Temos um ganhador! \n");
+        mensagemVencedor();
         return 1;
     }else if(s[2] == s[4] && s[4] == s[6]){
-        printf("Temos um ganhador! \n");
+        mensagemVencedor();
         return 1;
     }else {
-        //printf("Entrou no else \n");
         return 0;
     }
+}
+
+void mensagemVencedor(){
+    printf("Temos um ganhador! \n");
 }
